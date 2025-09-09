@@ -113,7 +113,7 @@ server.registerTool(
   "image.generate.replicate",
   {
     description:
-      "Generate an image using Replicate (default black-forest-labs/flux-1.1-pro). Requires REPLICATE_API_TOKEN.",
+      "Generate an image using Replicate models: Flux 1.1 Pro (default), Qwen Image, or SeedDream-4. Requires REPLICATE_API_TOKEN.",
     inputSchema: {
       prompt: z.string(),
       model: z.string().optional(),

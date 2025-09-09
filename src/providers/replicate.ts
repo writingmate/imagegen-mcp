@@ -4,6 +4,13 @@ import { saveBase64Image } from "../utils/fs.js";
 
 const DEFAULT_MODEL = "black-forest-labs/flux-1.1-pro";
 
+// Available Replicate models
+export const REPLICATE_MODELS = {
+  "flux-1.1-pro": "black-forest-labs/flux-1.1-pro",
+  "qwen-image": "qwen/qwen-image",
+  "seedream-4": "bytedance/seedream-4",
+} as const;
+
 export async function generateImageReplicate(args: GenerateImageArgs): Promise<GeneratedImage> {
   const apiKey = process.env.REPLICATE_API_TOKEN;
   if (!apiKey) {

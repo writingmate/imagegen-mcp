@@ -2,16 +2,16 @@
 
 # 🎨 ImageGen MCP Server
 
-**A powerful MCP server for AI image generation with support for multiple providers**
+**A powerful MCP server for AI image generation with OpenAI GPT-Image-1, Google Imagen 4, Flux 1.1, Qwen Image, SeedDream-4, and Nano Banana (Gemini 2.5 Flash Image) support**
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/imagegen-mcp-server?style=for-the-badge&logo=npm&color=blue" alt="npm version">
   <img src="https://img.shields.io/badge/license-MIT-orange?style=for-the-badge" alt="license">
-  <img src="https://img.shields.io/badge/4%20Providers-OpenAI%20•%20Google%20•%20Flux-purple?style=for-the-badge" alt="providers">
+  <img src="https://img.shields.io/badge/6%20Models-GPT--Image--1%20•%20Flux%201.1%20•%20Qwen%20•%20SeedDream-purple?style=for-the-badge" alt="models">
 </p>
 
 <p align="center">
-  <strong>OpenAI DALL-E</strong> • <strong>Google Gemini</strong> • <strong>Google Imagen</strong> • <strong>Flux 1.1 Pro</strong>
+  <strong>GPT-Image-1 MCP</strong> • <strong>Nano Banana MCP</strong> • <strong>Google Imagen 4 MCP</strong> • <strong>Flux 1.1 MCP</strong>
 </p>
 
 <p align="center">
@@ -48,29 +48,47 @@ Then in your MCP client:
 
 ---
 
-An MCP (Model Context Protocol) server for AI image generation with support for OpenAI DALL-E, Google Imagen, Google Gemini, and Flux 1.1 via Replicate.
+An MCP (Model Context Protocol) server for AI image generation supporting:
+- **GPT-Image-1 MCP**: OpenAI's latest image generation model
+- **Nano Banana MCP**: Gemini 2.5 Flash Image Preview model  
+- **Google Imagen 4 MCP**: Advanced photorealistic image generation
+- **Flux 1.1 MCP**: State-of-the-art prompt following via Replicate
+
+### 🎨 Model Comparison
+
+*Same prompt: "A serene mountain landscape with a crystal clear lake reflecting snow-capped peaks, golden hour lighting, highly detailed"*
 
 <table>
 <tr>
 <td width="50%">
-<img src="examples/flux-example.png" alt="Flux Example" width="100%"/>
-<p><em>Dragon generated with Flux 1.1 Pro</em></p>
+<img src="examples/comparison/flux-1.1-pro.png" alt="Flux 1.1 Pro" width="100%"/>
+<p align="center"><strong>Flux 1.1 Pro MCP</strong><br/><em>black-forest-labs/flux-1.1-pro</em></p>
 </td>
 <td width="50%">
-<img src="examples/gemini-example.png" alt="Gemini Example" width="100%"/>
-<p><em>Garden generated with Google Gemini</em></p>
+<img src="examples/comparison/qwen-image.png" alt="Qwen Image" width="100%"/>
+<p align="center"><strong>Qwen Image MCP</strong><br/><em>qwen/qwen-image</em></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="examples/comparison/seedream-4.png" alt="SeedDream-4" width="100%"/>
+<p align="center"><strong>SeedDream-4 MCP</strong><br/><em>bytedance/seedream-4</em></p>
+</td>
+<td width="50%">
+<img src="examples/comparison/nano-banana.png" alt="Nano Banana" width="100%"/>
+<p align="center"><strong>Nano Banana MCP</strong><br/><em>Gemini 2.5 Flash Image Preview</em></p>
 </td>
 </tr>
 </table>
 
 ## ✨ Features
 
-| Provider | Models | Highlights |
-|----------|--------|-----------|
-| **🤖 OpenAI** | DALL-E 2, DALL-E 3, GPT-Image-1 | Latest GPT-Image-1 with background control |
-| **🧠 Google Gemini** | Gemini 2.5 Flash Image Preview | Fast generation via official SDK |
-| **🎨 Google Imagen** | Imagen 3 (custom endpoint) | High-quality photorealistic images |
-| **⚡ Flux 1.1 Pro** | via Replicate API | State-of-the-art prompt following |
+| Provider | Models | Keywords | Highlights |
+|----------|--------|----------|-----------|
+| **🤖 OpenAI** | GPT-Image-1, DALL-E 3, DALL-E 2 | `gpt-image-1 mcp`, `openai image gen` | Latest GPT-Image-1 with background control |
+| **🧠 Nano Banana** | Gemini 2.5 Flash Image Preview | `nano banana mcp` | Fast generation via official Google SDK |
+| **🎨 Google Imagen** | Imagen 4 (custom endpoint) | `google imagen 4 mcp` | Advanced photorealistic image generation |
+| **⚡ Replicate** | Flux 1.1 Pro, Qwen Image, SeedDream-4 | `flux 1.1 mcp`, `qwen image mcp`, `seedream-4 mcp` | Multiple cutting-edge models via Replicate |
 
 ### 🎯 **Core Capabilities**
 - **Multiple Output Formats**: PNG, JPEG, WebP support
@@ -258,9 +276,9 @@ imagegen-mcp-server
 
 ## Available Tools
 
-### 1. OpenAI Image Generation (`image.generate.openai`)
+### 1. OpenAI GPT-Image-1 MCP (`image.generate.openai`)
 
-Generate images using OpenAI's DALL-E models.
+Generate images using OpenAI's latest GPT-Image-1 model and DALL-E series. This OpenAI image gen MCP tool supports the newest GPT-Image-1 with advanced background control.
 
 **Parameters:**
 ```typescript
@@ -284,9 +302,9 @@ Generate images using OpenAI's DALL-E models.
 - **DALL-E 3**: High-quality generation, sizes: 1024×1024, 1792×1024, 1024×1792
 - **GPT-Image-1**: Latest model with background control, multiple formats, flexible sizing
 
-### 2. Google Imagen Generation (`image.generate.google`)
+### 2. Google Imagen 4 MCP (`image.generate.google`)
 
-Generate images using Google's Imagen models via custom endpoint.
+Generate images using Google's advanced Imagen 4 model via custom endpoint. This Google Imagen 4 MCP integration provides cutting-edge photorealistic image generation.
 
 **Parameters:**
 ```typescript
@@ -306,9 +324,9 @@ Generate images using Google's Imagen models via custom endpoint.
 - Endpoint should accept POST requests with JSON payload
 - Response format: `{ image: { base64: string, mimeType?: string } }`
 
-### 3. Google Gemini Generation (`image.generate.gemini`)
+### 3. Nano Banana MCP (`image.generate.gemini`)
 
-Generate images using Google's Gemini models via the official SDK.
+Generate images using Google's Gemini 2.5 Flash Image Preview model (also known as "Nano Banana MCP"). This nano banana implementation provides fast, efficient image generation via Google's official SDK.
 
 **Parameters:**
 ```typescript
@@ -320,9 +338,12 @@ Generate images using Google's Gemini models via the official SDK.
 }
 ```
 
-### 4. Replicate Flux Generation (`image.generate.replicate`)
+### 4. Replicate Models MCP (`image.generate.replicate`)
 
-Generate images using Flux 1.1 models via Replicate API.
+Generate images using multiple cutting-edge models via Replicate API:
+- **Flux 1.1 MCP**: `black-forest-labs/flux-1.1-pro` (default) - State-of-the-art prompt following
+- **Qwen Image MCP**: `qwen/qwen-image` - Advanced AI image generation  
+- **SeedDream-4 MCP**: `bytedance/seedream-4` - High-quality diffusion model
 
 **Parameters:**
 ```typescript
@@ -374,10 +395,33 @@ const result = await mcpClient.callTool("image.generate.gemini", {
 ```javascript
 const result = await mcpClient.callTool("image.generate.replicate", {
   prompt: "A detailed portrait of a robot in a cyberpunk setting",
+  model: "black-forest-labs/flux-1.1-pro", // Default model
   width: 1024,
   height: 1536,
   seed: 12345,
   format: "png"
+});
+```
+
+### Generate with Qwen Image
+
+```javascript
+const result = await mcpClient.callTool("image.generate.replicate", {
+  prompt: "A traditional Chinese landscape painting with mountains and rivers",
+  model: "qwen/qwen-image",
+  width: 1024,
+  height: 1024
+});
+```
+
+### Generate with SeedDream-4
+
+```javascript
+const result = await mcpClient.callTool("image.generate.replicate", {
+  prompt: "A vibrant abstract art piece with flowing colors",
+  model: "bytedance/seedream-4",
+  width: 1024,
+  height: 1024 // Minimum 1024x1024 required
 });
 ```
 
