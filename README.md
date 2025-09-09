@@ -1,3 +1,5 @@
+![ImageGen MCP Server](header.png)
+
 # ImageGen MCP Server
 
 > 🎨 **A powerful MCP server for AI image generation with support for multiple providers**
