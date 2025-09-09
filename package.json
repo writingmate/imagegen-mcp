@@ -1,0 +1,55 @@
+{
+  "name": "imagegen-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for AI image generation with OpenAI DALL-E, Google Imagen, Gemini, and Flux via Replicate",
+  "keywords": [
+    "mcp",
+    "image-generation",
+    "ai",
+    "dalle",
+    "openai",
+    "google",
+    "gemini",
+    "flux",
+    "replicate"
+  ],
+  "author": "WritingMate <hello@writingmate.ai>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/writingmate/imagegen-mcp.git"
+  },
+  "homepage": "https://github.com/writingmate/imagegen-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/writingmate/imagegen-mcp/issues"
+  },
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "imagegen-mcp": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@google/genai": "^1.17.0",
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "dotenv": "^17.2.2",
+    "openai": "^5.20.0",
+    "replicate": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.2"
+  }
+}
