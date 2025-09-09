@@ -5,9 +5,9 @@
 **A powerful MCP server for AI image generation with support for multiple providers**
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/imagegen-mcp-server?style=for-the-badge&logo=npm&logoColor=white&color=blue" alt="npm version">
-  <img src="https://img.shields.io/npm/dt/imagegen-mcp-server?style=for-the-badge&logo=npm&logoColor=white&color=green" alt="downloads">
-  <img src="https://img.shields.io/github/license/writingmate/imagegen-mcp?style=for-the-badge&color=orange" alt="license">
+  <img src="https://img.shields.io/npm/v/imagegen-mcp-server?style=for-the-badge&logo=npm&color=blue" alt="npm version">
+  <img src="https://img.shields.io/badge/license-MIT-orange?style=for-the-badge" alt="license">
+  <img src="https://img.shields.io/badge/4%20Providers-OpenAI%20•%20Google%20•%20Flux-purple?style=for-the-badge" alt="providers">
 </p>
 
 <p align="center">
