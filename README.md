@@ -182,7 +182,7 @@ imagegen-mcp-server
 
 ## Available Tools
 
-### 1. OpenAI Image Generation (`image_generate_openai`)
+### 1. OpenAI Image Generation (`image.generate.openai`)
 
 Generate images using OpenAI's DALL-E models.
 
@@ -208,7 +208,7 @@ Generate images using OpenAI's DALL-E models.
 - **DALL-E 3**: High-quality generation, sizes: 1024×1024, 1792×1024, 1024×1792
 - **GPT-Image-1**: Latest model with background control, multiple formats, flexible sizing
 
-### 2. Google Imagen Generation (`image_generate_google`)
+### 2. Google Imagen Generation (`image.generate.google`)
 
 Generate images using Google's Imagen models via custom endpoint.
 
@@ -230,7 +230,7 @@ Generate images using Google's Imagen models via custom endpoint.
 - Endpoint should accept POST requests with JSON payload
 - Response format: `{ image: { base64: string, mimeType?: string } }`
 
-### 3. Google Gemini Generation (`image_generate_gemini`)
+### 3. Google Gemini Generation (`image.generate.gemini`)
 
 Generate images using Google's Gemini models via the official SDK.
 
@@ -244,7 +244,7 @@ Generate images using Google's Gemini models via the official SDK.
 }
 ```
 
-### 4. Replicate Flux Generation (`image_generate_replicate`)
+### 4. Replicate Flux Generation (`image.generate.replicate`)
 
 Generate images using Flux 1.1 models via Replicate API.
 
@@ -274,7 +274,7 @@ Generate images using Flux 1.1 models via Replicate API.
 ### Generate with OpenAI GPT-Image-1
 
 ```javascript
-const result = await mcpClient.callTool("image_generate_openai", {
+const result = await mcpClient.callTool("image.generate.openai", {
   prompt: "A serene mountain landscape at sunset",
   model: "gpt-image-1",
   size: "1536x1024",
@@ -287,7 +287,7 @@ const result = await mcpClient.callTool("image_generate_openai", {
 ### Generate with Google Gemini
 
 ```javascript
-const result = await mcpClient.callTool("image_generate_gemini", {
+const result = await mcpClient.callTool("image.generate.gemini", {
   prompt: "A futuristic city with flying cars",
   returnBase64: true
 });
@@ -296,7 +296,7 @@ const result = await mcpClient.callTool("image_generate_gemini", {
 ### Generate with Flux 1.1
 
 ```javascript
-const result = await mcpClient.callTool("image_generate_replicate", {
+const result = await mcpClient.callTool("image.generate.replicate", {
   prompt: "A detailed portrait of a robot in a cyberpunk setting",
   width: 1024,
   height: 1536,
