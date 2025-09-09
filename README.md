@@ -18,6 +18,12 @@
   <code>npx imagegen-mcp-server</code>
 </p>
 
+<p align="center">
+  <a href="https://writingmate.ai">
+    <img src="https://img.shields.io/badge/Powered%20by-WritingMate.ai-purple?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="Powered by WritingMate.ai">
+  </a>
+</p>
+
 </div>
 
 ---
@@ -363,3 +369,17 @@ npm start      # Start production server
 ## License
 
 MIT - See LICENSE file for details.
+
+---
+
+<div align="center">
+
+### 💡 Brought to you by
+
+**[WritingMate.ai](https://writingmate.ai)** - All-in-One AI Platform
+
+*The team behind WritingMate.ai brings you powerful AI tools and integrations*
+
+[![WritingMate.ai](https://img.shields.io/badge/WritingMate.ai-All--in--One%20AI%20Platform-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K)](https://writingmate.ai)
+
+</div>

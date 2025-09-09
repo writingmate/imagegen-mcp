@@ -2,6 +2,8 @@
 
 This guide will walk you through installing and setting up the ImageGen MCP Server.
 
+> 💡 **Built by the [WritingMate.ai](https://writingmate.ai) team** - All-in-One AI Platform
+
 ## Prerequisites
 
 - **Node.js 18 or higher** - [Download here](https://nodejs.org/)
