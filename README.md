@@ -4,11 +4,18 @@
 
 An MCP (Model Context Protocol) server for AI image generation with support for OpenAI DALL-E, Google Imagen, Google Gemini, and Flux 1.1 via Replicate.
 
-![Flux Example](examples/flux-example.png)
-*Dragon generated with Flux 1.1 Pro*
-
-![Gemini Example](examples/gemini-example.png)  
-*Garden generated with Google Gemini*
+<table>
+<tr>
+<td width="50%">
+<img src="examples/flux-example.png" alt="Flux Example" width="100%"/>
+<p><em>Dragon generated with Flux 1.1 Pro</em></p>
+</td>
+<td width="50%">
+<img src="examples/gemini-example.png" alt="Gemini Example" width="100%"/>
+<p><em>Garden generated with Google Gemini</em></p>
+</td>
+</tr>
+</table>
 
 ## Features
 

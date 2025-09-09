@@ -11,7 +11,15 @@
       "Bash(npm install:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(timeout:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm view:*)",
+      "Bash(npm publish:*)",
+      "Bash(npm version:*)"
     ],
     "deny": [],
     "ask": []

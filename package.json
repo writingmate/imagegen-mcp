@@ -26,7 +26,7 @@
   "type": "module",
   "main": "dist/server.js",
   "bin": {
-    "imagegen-mcp": "dist/server.js"
+    "imagegen-mcp-server": "dist/server.js"
   },
   "scripts": {
     "build": "tsc -p .",
