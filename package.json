@@ -1,6 +1,6 @@
 {
   "name": "imagegen-mcp-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for AI image generation with OpenAI DALL-E, Google Imagen, Gemini, and Flux via Replicate",
   "keywords": [
     "mcp",
