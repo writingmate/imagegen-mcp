@@ -1,8 +1,40 @@
-![ImageGen MCP Server](header.png)
+<div align="center">
 
-# ImageGen MCP Server
+# 🎨 ImageGen MCP Server
 
-> 🎨 **A powerful MCP server for AI image generation with support for multiple providers**
+**A powerful MCP server for AI image generation with support for multiple providers**
+
+<p align="center">
+  <img src="https://img.shields.io/npm/v/imagegen-mcp-server?style=for-the-badge&logo=npm&logoColor=white&color=blue" alt="npm version">
+  <img src="https://img.shields.io/npm/dt/imagegen-mcp-server?style=for-the-badge&logo=npm&logoColor=white&color=green" alt="downloads">
+  <img src="https://img.shields.io/github/license/writingmate/imagegen-mcp?style=for-the-badge&color=orange" alt="license">
+</p>
+
+<p align="center">
+  <strong>OpenAI DALL-E</strong> • <strong>Google Gemini</strong> • <strong>Google Imagen</strong> • <strong>Flux 1.1 Pro</strong>
+</p>
+
+<p align="center">
+  <code>npx imagegen-mcp-server</code>
+</p>
+
+</div>
+
+---
+
+## 🎬 Quick Demo
+
+```bash
+# Install and run in one command
+npx imagegen-mcp-server
+```
+
+Then in your MCP client (like Claude Desktop):
+> *"Generate an image of a cyberpunk city using Flux 1.1"*
+
+✅ **Result**: High-quality image saved to `outputs/` directory
+
+---
 
 An MCP (Model Context Protocol) server for AI image generation with support for OpenAI DALL-E, Google Imagen, Google Gemini, and Flux 1.1 via Replicate.
 
@@ -19,15 +51,21 @@ An MCP (Model Context Protocol) server for AI image generation with support for 
 </tr>
 </table>
 
-## Features
+## ✨ Features
 
-- **OpenAI Integration**: DALL-E 2, DALL-E 3, and the latest GPT-Image-1 model
-- **Google Integration**: Imagen 3 via Google AI API and Gemini image generation  
-- **Flux Integration**: Flux 1.1 Pro via Replicate for state-of-the-art image generation
+| Provider | Models | Highlights |
+|----------|--------|-----------|
+| **🤖 OpenAI** | DALL-E 2, DALL-E 3, GPT-Image-1 | Latest GPT-Image-1 with background control |
+| **🧠 Google Gemini** | Gemini 2.5 Flash Image Preview | Fast generation via official SDK |
+| **🎨 Google Imagen** | Imagen 3 (custom endpoint) | High-quality photorealistic images |
+| **⚡ Flux 1.1 Pro** | via Replicate API | State-of-the-art prompt following |
+
+### 🎯 **Core Capabilities**
 - **Multiple Output Formats**: PNG, JPEG, WebP support
-- **Flexible Sizing**: Multiple resolution options per provider
-- **Base64 & File Output**: Return images as base64 or save to disk
-- **MCP Compatible**: Works seamlessly with MCP-enabled applications
+- **Flexible Sizing**: Custom dimensions and aspect ratios
+- **Base64 & File Output**: Return images as base64 or save to disk  
+- **Seed Support**: Reproducible generation with Flux
+- **MCP Compatible**: Works seamlessly with any MCP client
 
 ## 🚀 Quick Start
 
