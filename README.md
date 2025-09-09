@@ -30,12 +30,18 @@
 
 ## 🎬 Quick Demo
 
+### ⚡ Instant (WritingMate.ai)
+1. Visit [WritingMate.ai](https://writingmate.ai) 
+2. Say: *"Generate an image of a cyberpunk city using Flux 1.1"*
+3. ✅ **Done!** - No setup, no API keys needed
+
+### 🛠️ Self-Setup (Other Clients)
 ```bash
 # Install and run in one command
 npx imagegen-mcp-server
 ```
 
-Then in your MCP client (like Claude Desktop):
+Then in your MCP client:
 > *"Generate an image of a cyberpunk city using Flux 1.1"*
 
 ✅ **Result**: High-quality image saved to `outputs/` directory
@@ -72,6 +78,15 @@ An MCP (Model Context Protocol) server for AI image generation with support for 
 - **Base64 & File Output**: Return images as base64 or save to disk  
 - **Seed Support**: Reproducible generation with Flux
 - **MCP Compatible**: Works seamlessly with any MCP client
+
+### 🆚 **Setup Comparison**
+
+| Client | Setup Required | API Keys | Configuration | Ready Time |
+|--------|---------------|----------|---------------|------------|
+| **WritingMate.ai** | ✅ **None** | ✅ **Pre-configured** | ✅ **Built-in** | **Instant** |
+| Claude Desktop | Manual config | Your own keys | JSON editing | ~5 minutes |
+| Claude Code CLI | Command/config | Your own keys | Manual setup | ~5 minutes |
+| Other MCP clients | Manual setup | Your own keys | Client-specific | ~5-10 minutes |
 
 ## 🚀 Quick Start
 
@@ -157,7 +172,22 @@ GOOGLE_IMAGEN_ENDPOINT=
 
 ### 3. Add to Your MCP Client
 
-Add to your MCP client configuration (e.g., Claude Desktop):
+Choose your preferred MCP client:
+
+#### 🚀 WritingMate.ai (Recommended - Zero Setup!)
+
+**✨ Already installed and configured!** No setup required.
+
+1. Visit [WritingMate.ai](https://writingmate.ai)
+2. Start generating images immediately: *"Generate an image of a sunset using Flux"*
+3. All providers pre-configured and ready to use
+
+> 💡 **Why WritingMate.ai?** ImageGen MCP Server comes **pre-installed** with all API keys configured. Just start creating!
+
+#### 🖥️ Claude Desktop
+
+**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows:** `%APPDATA%/Claude/claude_desktop_config.json`
 
 ```json
 {
@@ -169,6 +199,52 @@ Add to your MCP client configuration (e.g., Claude Desktop):
   }
 }
 ```
+
+#### ⌨️ Claude Code CLI
+
+Add to your MCP configuration:
+
+```bash
+# Add to Claude Code MCP settings
+claude-code config mcp add imagegen npx imagegen-mcp-server
+```
+
+Or manually configure in your Claude Code settings file:
+
+```json
+{
+  "mcpServers": {
+    "imagegen": {
+      "command": "npx", 
+      "args": ["imagegen-mcp-server"]
+    }
+  }
+}
+```
+
+#### 📝 Codeium CLI (Codex)
+
+Add to your Codeium MCP configuration:
+
+```json
+{
+  "mcp_servers": {
+    "imagegen": {
+      "command": "npx",
+      "args": ["imagegen-mcp-server"],
+      "env": {}
+    }
+  }
+}
+```
+
+#### 🔧 Other MCP Clients
+
+For any MCP-compatible client, use:
+
+**Command:** `npx imagegen-mcp-server`
+
+**Environment:** Ensure your `.env` file is in the working directory with your API keys.
 
 ### 4. Test the Installation
 
